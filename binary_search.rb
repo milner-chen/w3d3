@@ -1,7 +1,7 @@
 def bsearch(arr, target)
     middle = ((arr.length - 1) / 2)
     return nil if arr.empty?
-    return middle if arr[middle] == target
+    return arr.index(target) if arr[middle] == target
     if target < arr[middle]
         bsearch(arr[0...middle], target)
     else
